@@ -1,0 +1,1 @@
+Place logo image and whitepaper PDF in this folder if not already present.
