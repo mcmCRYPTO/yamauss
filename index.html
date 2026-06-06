@@ -4,260 +4,107 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YAMAUSS (YAUSS)</title>
-
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#080808;
-color:white;
-overflow-x:hidden;
-}
-
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.logo{
-width:220px;
-animation:float 3s ease-in-out infinite;
-}
-
-@keyframes float{
-0%,100%{transform:translateY(0px);}
-50%{transform:translateY(-15px);}
-}
-
-h1{
-font-size:70px;
-color:#FFD700;
-margin-top:20px;
-text-shadow:0 0 20px #FFD700;
-}
-
-.symbol{
-font-size:28px;
-color:white;
-margin-top:10px;
-}
-
-.description{
-max-width:800px;
-margin-top:25px;
-font-size:20px;
-line-height:1.6;
-color:#cccccc;
-}
-
-.buttons{
-margin-top:35px;
-}
-
-.btn{
-display:inline-block;
-padding:15px 30px;
-margin:10px;
-background:#FFD700;
-color:black;
-font-weight:bold;
-text-decoration:none;
-border-radius:10px;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
-}
-
-.stats{
-padding:80px 20px;
-text-align:center;
-background:#111;
-}
-
-.stat-card{
-display:inline-block;
-padding:30px;
-margin:15px;
-background:#1b1b1b;
-border:1px solid #FFD700;
-border-radius:15px;
-min-width:250px;
-}
-
-.stat-card h2{
-color:#FFD700;
-margin-bottom:10px;
-}
-
-.section{
-padding:80px 20px;
-max-width:1000px;
-margin:auto;
-text-align:center;
-}
-
-footer{
-padding:40px;
-text-align:center;
-background:#050505;
-color:#888;
-}
-
-.fade{
-opacity:0;
-transform:translateY(30px);
-transition:all 1s;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
-
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#0f172a; color:white;}
+header.hero { text-align:center; padding:80px 20px; background:#111827;}
+.logo { max-width:180px; margin-bottom:20px; }
+h1, h2, h3 { margin:10px 0; }
+p { margin:8px 0; line-height:1.5; }
+nav { text-align:center; background:#1e293b; padding:15px; }
+nav a { color:#facc15; margin:0 12px; text-decoration:none; font-weight:bold; }
+.btn { display:inline-block; padding:12px 20px; background:#facc15; color:#000; text-decoration:none; border-radius:6px; margin:5px; }
+.container { max-width:1000px; margin:auto; padding:30px; }
+table { width:100%; border-collapse:collapse; margin-top:20px; }
+td, th { border:1px solid #444; padding:10px; text-align:left; }
+ul, ol { padding-left:20px; }
+.card { background:#1e293b; padding:20px; border-radius:10px; margin:15px 0; }
+footer { text-align:center; padding:20px; background:#111827; margin-top:40px; font-size:0.9em; color:#facc15;}
 </style>
 </head>
-
 <body>
 
-<section class="hero">
+<!-- Navigation -->
+<nav>
+<a href="#hero">Home</a>
+<a href="#about">About</a>
+<a href="#tokenomics">Tokenomics</a>
+<a href="#roadmap">Roadmap</a>
+<a href="#buy">Buy YAUSS</a>
+</nav>
 
-<img src="logo.svg" class="logo">
-
+<!-- Hero Section -->
+<header class="hero" id="hero">
+<img src="https://github.com/mcmCRYPTO/yamauss/blob/main/logo.png" class="logo" alt="YAMAUSS Logo">
 <h1>YAMAUSS</h1>
+<h2>The Golden Ethereum Community Token</h2>
+<a class="btn" href="https://app.uniswap.org" target="_blank">Buy on Uniswap</a>
+<a class="btn" href="https://etherscan.io" target="_blank">View on Etherscan</a>
+</header>
 
-<div class="symbol">YAUSS TOKEN</div>
-
-<div class="description">
-A decentralized ERC-20 token built on Ethereum,
-designed for community growth, transparency and innovation.
+<!-- About Section -->
+<div class="container" id="about">
+<h2>About YAMAUSS</h2>
+<div class="card">
+<p>YAMAUSS (YAUSS) is a decentralized ERC-20 token built on Ethereum. The project aims to create a secure, transparent and community-driven ecosystem powered by blockchain technology.</p>
 </div>
 
-<div class="buttons">
-
-<a class="btn" href="https://app.uniswap.org/" target="_blank">
-UNISWAP
-</a>
-
-<a class="btn" href="https://etherscan.io/" target="_blank">
-ETHERSCAN
-</a>
-
-<a class="btn" href="#">
-COINGECKO
-</a>
-
-<a class="btn" href="#">
-TRUST WALLET
-</a>
-
+<h3>Live Token Statistics</h3>
+<div class="card">
+<p><strong>Total Supply:</strong> 1,000,000,000 YAUSS</p>
+<p><strong>Network:</strong> Ethereum</p>
+<p><strong>Holders:</strong> Coming Soon</p>
+<p><strong>Contract Address:</strong> <a href="https://etherscan.io/address/YOUR_CONTRACT_ADDRESS" target="_blank">YOUR_CONTRACT_ADDRESS</a></p>
+</div>
 </div>
 
-</section>
-
-<section class="stats fade">
-
-<div class="stat-card">
-<h2>Total Supply</h2>
-<p id="supply">0</p>
+<!-- Tokenomics Section -->
+<div class="container" id="tokenomics">
+<h2>Tokenomics</h2>
+<table>
+<tr><th>Allocation</th><th>Percentage</th></tr>
+<tr><td>Community</td><td>50%</td></tr>
+<tr><td>Liquidity</td><td>30%</td></tr>
+<tr><td>Development</td><td>10%</td></tr>
+<tr><td>Marketing</td><td>10%</td></tr>
+</table>
 </div>
 
-<div class="stat-card">
-<h2>Network</h2>
-<p>Ethereum</p>
+<!-- Roadmap Section -->
+<div class="container" id="roadmap">
+<h2>Roadmap</h2>
+<div class="card">✅ Phase 1 - Token Launch</div>
+<div class="card">✅ Phase 2 - Uniswap Listing</div>
+<div class="card">🔄 Phase 3 - CoinGecko</div>
+<div class="card">🔄 Phase 4 - CoinMarketCap</div>
+<div class="card">🚀 Phase 5 - Ecosystem Expansion</div>
 </div>
 
-<div class="stat-card">
-<h2>Standard</h2>
-<p>ERC-20</p>
+<!-- Buy Section -->
+<div class="container" id="buy">
+<h2>Buy YAUSS</h2>
+<ol>
+<li>Install MetaMask</li>
+<li>Buy ETH</li>
+<li>Connect Wallet</li>
+<li>Swap ETH → YAUSS</li>
+</ol>
+
+<a class="btn" href="assets/whitepaper.pdf" target="_blank">📄 Download Whitepaper</a>
+
+<h3>Social Links</h3>
+<ul>
+<li><a href="https://github.com/mcmcrypto/yamauss" target="_blank">GitHub</a></li>
+<li><a href="https://twitter.com" target="_blank">X (Twitter)</a></li>
+<li><a href="https://t.me" target="_blank">Telegram</a></li>
+<li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+</ul>
 </div>
 
-</section>
-
-<section class="section fade">
-
-<h2 style="color:#FFD700;font-size:40px;">
-About YAMAUSS
-</h2>
-
-<br>
-
-<p style="font-size:18px;line-height:1.8;color:#cccccc;">
-YAMAUSS is a next-generation Ethereum token
-focused on community adoption and decentralized finance.
-Built with transparency and accessibility in mind,
-YAUSS aims to create a trusted ecosystem for holders.
-</p>
-
-</section>
-
-<section class="section fade">
-
-<h2 style="color:#FFD700;font-size:40px;">
-Contract Address
-</h2>
-
-<br>
-
-<p>
-0xYOUR_CONTRACT_ADDRESS
-</p>
-
-</section>
-
+<!-- Footer -->
 <footer>
-
-© 2026 YAMAUSS (YAUSS)
-
+YAMAUSS (YAUSS) - ERC-20 Token on Ethereum<br>
+Copyright © WISAT SARLU 2026 YAMAUSS; All Rights Reserved
 </footer>
-
-<script>
-
-let target=1000000000;
-let current=0;
-
-let counter=setInterval(()=>{
-
-current+=5000000;
-
-document.getElementById("supply").innerText=
-current.toLocaleString();
-
-if(current>=target){
-clearInterval(counter);
-}
-
-},20);
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-
-});
-
-});
-
-document.querySelectorAll(".fade").forEach(el=>{
-observer.observe(el);
-});
-
-</script>
 
 </body>
 </html>
